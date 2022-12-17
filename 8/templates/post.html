@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{post.username}}'s post{% endblock %} 
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/post.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/comments.css') }}">
+{% endblock %}
+{% block home_active %}active{% endblock %}
+{% block content %} 
+        <div class="contentContainer">
+            <div class="userInfo">
+                <img src="{{ url_for('static', filename=post.profilepic) }}" alt="profile picture" class="profilePicture">
+                <h4 class="username">@{{ post.username }}</h4>
+            </div> 
+            <img src="{{ url_for('static', filename=post.postpic) }}" alt="frog" class="userimg">
+            <div class="userpost">           
+                <p>{{ post.text }}</p>
+            </div>
+            
+            <div class="commentsarea">
+                {% if session.logged_in %}
+                    <form action="{{ url_for('single_post', id=post.id) }}" method="post">
+                        <div class="form-group">
+                            <label for="text">Commenta qui</label>
+                            <textarea class="form-control" id="commenttext" name="text" rows="1"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="csubmit">Posta il commento</button>
+                    </form>
+                {% endif %}
+                {% if comments %}         
+                    {% for comment in comments %}
+                        <h4 class="usercomment">@{{ comment.username }}</h4>
+                        <p class="comment">{{ comment.text }}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+{% endblock %}

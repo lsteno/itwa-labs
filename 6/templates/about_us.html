@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}about us{% endblock %} 
+{% block css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/aboutPage.css') }}">{% endblock %}
+{% block about_active %}active{% endblock %}
+{% block content %} 
+    <div class="aboutPage">
+        <h2>Hi, I'm Lorenzo</h2>
+        <p>I am the only developer behind this project that i created for the course of Introduction To Web Apps</p>
+        <p>please, enjoy!</p>
+        <img src="{{ url_for('static', filename='lorepic.JPG') }}" alt="picture of the dev" class="userimg">
+    </div>
+{% endblock %}

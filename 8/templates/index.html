@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}home{% endblock %} 
+{% block home_active %}active{% endblock %}
+{% block content %} 
+    {% for post in posts%}
+        <div class="post{% if session['username'] == post.username %}yellow{% endif %}" onclick="location.href='{{ url_for('single_post', id=post.id) }}';" style="cursor: pointer;">
+            <div class="contentContainer">
+                <img src="{{ url_for('static', filename=post.postpic) }}" alt="frog" class="userimg">
+                <div class="userpost">
+                    <div class="userInfo">
+                        <img src="{{ url_for('static', filename=post.profilepic) }}" alt="profile picture" class="profilePicture">
+                        <h4 class="username">@{{ post.username }}</h4>
+                    </div>            
+                    <p>{{ post.text }}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% if session.logged_in %}
+        <!-- Button trigger modal -->
+        <button type="button" id="newPost" class="tn btn-outline-light fixed-bottom float-right" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+            +
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Log in</h5>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <form action="/posts/new" method="POST" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="testo" class="form-label">Testo del post</label>
+                        <textarea class="form-control" name="testo" id="dioporco" rows="3" required minlength="5" maxlength="500"></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <label for="image" class="form-label">Immagine</label>
+                      <input type="file" class="form-control" name="image" aria-describedby="Carica un'immagine">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Crea</button>
+                  </form>
+            </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

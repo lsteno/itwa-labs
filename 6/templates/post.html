@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{post.username}}'s post{% endblock %} 
+{% block css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/post.css') }}">{% endblock %}
+{% block home_active %}active{% endblock %}
+{% block content %} 
+        <div class="contentContainer">
+            <div class="userInfo">
+                <img src="{{ url_for('static', filename=post.profilepic) }}" alt="profile picture" class="profilePicture">
+                <h4 class="username">@{{ post.username }}</h4>
+            </div> 
+            <img src="{{ url_for('static', filename=post.postpic) }}" alt="frog" class="userimg">
+            <div class="userpost">           
+                <p>{{ post.text }}</p>
+            </div>
+        </div>
+{% endblock %}

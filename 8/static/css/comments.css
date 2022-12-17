@@ -1,0 +1,43 @@
+.usercomment
+{
+    font-size: 0.9rem;
+    color: rgb(152, 152, 152);
+}
+
+.commentsarea
+{
+    border-top: 2px solid rgb(215, 215, 215);
+}
+
+.usercomment
+{
+    margin: 2rem;
+    margin-bottom: 0.1rem;
+}
+
+.comment 
+{
+    margin: 2rem;
+    margin-top: 0.1rem;
+}
+
+textarea
+{
+    display: inline;
+    margin-bottom: 1rem;
+}
+
+label
+{
+    font-weight: bold;
+}
+
+#csubmit
+{
+    display: inline;
+}
+
+.form-group
+{
+    display: inline;
+}

@@ -1,0 +1,307 @@
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+}
+
+h1
+{
+    color: rgb(248,89,22);
+    font-size: 350%;
+}
+
+aside li
+{
+    list-style: none;
+    display: inline;
+    margin: 0.5rem;
+}
+
+a
+{
+    color: rgb(109,156,47);
+    text-decoration: none;    
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+.fill-div 
+{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+.username
+{
+    color: rgb(152, 152, 152);
+}
+
+.welcome
+{
+    display: flex;
+    justify-content: center;
+    margin: 0.8rem;
+}
+
+.post
+{
+    border: 2px solid rgb(215, 215, 215);
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.userimg
+{
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.profilePicture
+{
+    display: inline-block;
+    max-width: 2rem;
+    max-height: 2rem;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+}
+
+.username
+{
+    display: inline-block;
+}
+
+.contentContainer
+{
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
+
+#newPost
+{
+    color: white;
+    left: 85vw;
+    bottom: 5vh;
+    border-radius: 50%;
+    background-color: rgb(248,89,22);
+    border-color: rgb(248,89,22);
+}
+
+h4
+{
+    font-weight: 300;
+    color: rgb(66, 66, 66);
+}
+
+ul 
+{
+    display: flex;
+    justify-content: center;
+}
+
+form
+{
+    margin: 2rem;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px)
+{
+    .contentContainer
+    {
+        all: unset;
+        display: flex;
+    }
+
+    .userimg
+    {
+        display: inline-block;
+    }
+
+    .userInfo
+    {
+        display: block;
+    }
+
+    .userimg
+    {
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+        margin: 2em 1em 2em 1em;
+    }
+
+    .userpost
+    {
+        margin: 2em;
+    }
+}
+
+@media (min-width: 991.99px) and (max-width: 1200px)
+{
+    .contentContainer
+    {
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .userpost
+    {
+        margin-top: 2em;
+    }
+
+    .userimg
+    {
+        all: unset;
+        object-fit: cover;
+        width: 350px;
+        height: 350px;
+        margin: 2em;
+    }
+
+    p 
+    {
+        font-size: 120%;
+    }
+
+    ul 
+    {
+        all: unset;
+    }
+
+    .topPosts 
+    {
+        margin-top: 1em;
+    }
+
+    aside li
+    {
+        all: unset;
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 120%;
+    }
+
+    #newPost
+    {
+        left: 90vw;
+        bottom: 5vh;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        font-size: 300%;
+        background-color: rgb(248,89,22);
+        border-color: rgb(248,89,22);
+    }
+
+    #navUl
+    {
+        margin-left: 61vw;
+    }
+}
+
+@media (min-width: 1200.5px)
+{
+    h1 
+    {
+        font-size: 370%;
+    }
+
+    .contentContainer
+    {
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    li 
+    {
+        font-size: 120%;
+    }
+
+    li a 
+    {
+        font-size: 100%;       
+    }
+
+    .topPosts 
+    {
+        margin-top: 1em;
+    }
+
+    .userpost
+    {
+        margin-top: 2em;
+    }
+
+    .userimg
+    {
+        all: unset;
+        object-fit: cover;
+        width: 400px;
+        height: 400px;
+        margin: 2em;
+    }
+
+    .profilePicture
+    {
+        display: inline-block;
+        max-width: 2rem;
+        max-height: 2rem;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    .username
+    {
+        font-size: 120%;
+    }
+
+    p 
+    {
+        font-size: 110%;
+    }
+
+    ul 
+    {
+        all: unset;
+    }
+
+    aside li
+    {
+        all: unset;
+        display: block;
+        margin-bottom: 1rem;
+        font-size: 120%;
+    }
+
+    #newPost
+    {
+        left: 90vw;
+        bottom: 5vh;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        font-size: 150%;
+        background-color: rgb(248,89,22);
+        border-color: rgb(248,89,22);
+    }
+
+    #navUl
+    {
+        margin-left: 61vw;
+    }
+}
