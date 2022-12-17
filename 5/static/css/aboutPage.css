@@ -1,0 +1,30 @@
+.aboutPage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p
+{
+    display: block;
+    text-align: center;
+}
+
+h2
+{
+    display: block;
+    text-align: center;
+    margin: 2em;
+}
+
+.userimg
+{
+    all: unset;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    object-fit: cover;
+}
