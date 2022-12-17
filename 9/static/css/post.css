@@ -1,0 +1,61 @@
+.contentContainer
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid rgb(215, 215, 215);
+    margin-bottom: 2rem;
+}
+
+.userimg
+{
+    all: unset;
+    width: 50vw;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.userInfo, .userpost
+{
+    margin: 2rem;
+}
+
+.userInfo
+{
+    margin-top: 2em;
+}
+
+p 
+{
+    margin: 1rem;
+}
+
+@media (min-width: 0) and (max-width: 768px)
+{
+    .contentContainer
+    {
+        all: unset;
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid rgb(215, 215, 215);
+    }
+
+    .userimg
+    {
+        width: 80vw;
+        height: auto;
+        margin: auto;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    main 
+    {
+        display: flex;
+        justify-content: center;
+    }
+}
